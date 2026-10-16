@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nonlapan & Rukkij Wedding</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #fdfcfb;
+            font-family: 'Playfair Display', serif;
+            color: #4a4a4a;
+        }
+        .font-script {
+            font-family: 'Great Vibes', cursive;
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="antialiased overflow-x-hidden">
+
+    <!-- Hero / Cover Section -->
+    <section class="min-h-screen flex flex-col items-center justify-center p-4 text-center">
+        <p class="uppercase tracking-widest text-sm mb-6 fade-in text-gray-500">You are invited to the wedding</p>
+        
+        <!-- COVER IMAGE HERE -->
+        <div class="w-full max-w-lg mb-8 fade-in">
+            <img src="f495d0d4-724c-43ae-a29d-4bae273bfc39.jpeg" alt="Nonlapan and Rukkij Cover Illustration" class="w-full h-auto rounded-lg shadow-sm border border-gray-100">
+        </div>
+
+        <h1 class="font-script text-6xl md:text-7xl text-[#6b4c3a] mb-4 fade-in">Nonlapan & Rukkij</h1>
+        <p class="text-xl tracking-widest text-[#6b4c3a] font-semibold fade-in">08.11.2026</p>
+        
+        <!-- Animated Scroll Indicator -->
+        <div class="mt-16 animate-bounce text-gray-400 fade-in">
+            <svg class="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Countdown Section -->
+    <section class="py-20 px-4 bg-white flex flex-col items-center text-center border-t border-gray-100">
+        <!-- Interactive Countdown -->
+        <div class="w-full max-w-lg bg-gray-50 p-8 rounded-xl shadow-sm border border-gray-100 fade-in">
+            <h3 class="text-xl mb-6 text-[#6b4c3a] italic">Counting down to our big day</h3>
+            <div id="countdown" class="flex justify-center gap-4 text-2xl md:text-4xl text-[#6b4c3a]">
+                <div class="flex flex-col"><span id="days" class="font-bold">00</span><span class="text-xs uppercase tracking-widest mt-1 text-gray-500">Days</span></div><span class="font-bold">:</span>
+                <div class="flex flex-col"><span id="hours" class="font-bold">00</span><span class="text-xs uppercase tracking-widest mt-1 text-gray-500">Hours</span></div><span class="font-bold">:</span>
+                <div class="flex flex-col"><span id="minutes" class="font-bold">00</span><span class="text-xs uppercase tracking-widest mt-1 text-gray-500">Mins</span></div><span class="font-bold">:</span>
+                <div class="flex flex-col"><span id="seconds" class="font-bold">00</span><span class="text-xs uppercase tracking-widest mt-1 text-gray-500">Secs</span></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-8 text-center text-sm text-gray-400 bg-white">
+        <p>#NRWEDDING</p>
+        <p class="mt-2 text-xs italic">Sincerest apologies if the invitation was not personally delivered.</p>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script>
+        // Scroll Fade-in Animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
+
+        // Countdown Timer to November 8, 2026 at 15:09
+        const weddingDate = new Date("Nov 8, 2026 15:09:00").getTime();
+
+        const x = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerText = days.toString().padStart(2, '0');
+            document.getElementById("hours").innerText = hours.toString().padStart(2, '0');
+            document.getElementById("minutes").innerText = minutes.toString().padStart(2, '0');
+            document.getElementById("seconds").innerText = seconds.toString().padStart(2, '0');
+
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "<div class='text-xl italic'>Today is the day!</div>";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
