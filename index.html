@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nonlapan & Rukkij Wedding</title>
+    <title>Nonlapan & Rukkij Wedding Invitation</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     <style>
@@ -23,6 +23,14 @@
         .fade-in.visible {
             opacity: 1;
             transform: translateY(0);
+        }
+        .theme-dot {
+            height: 24px;
+            width: 24px;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 0 4px;
+            border: 1px solid #e2e8f0;
         }
     </style>
 </head>
@@ -48,10 +56,17 @@
         </div>
     </section>
 
-    <!-- Countdown Section -->
+    <!-- Details Section -->
     <section class="py-20 px-4 bg-white flex flex-col items-center text-center border-t border-gray-100">
+        <h2 class="text-3xl mb-10 fade-in text-[#6b4c3a]">Wedding Details</h2>
+        
+        <!-- DETAIL IMAGE HERE -->
+        <div class="w-full max-w-2xl mb-12 fade-in">
+            <img src="08b6a5aa-e56b-43e7-8167-5ac0c48d2feb.jpeg" alt="Wedding Details Card" class="w-full h-auto rounded-lg shadow-md border border-gray-100">
+        </div>
+
         <!-- Interactive Countdown -->
-        <div class="w-full max-w-lg bg-gray-50 p-8 rounded-xl shadow-sm border border-gray-100 fade-in">
+        <div class="w-full max-w-lg bg-gray-50 p-8 rounded-xl shadow-sm border border-gray-100 fade-in mt-8">
             <h3 class="text-xl mb-6 text-[#6b4c3a] italic">Counting down to our big day</h3>
             <div id="countdown" class="flex justify-center gap-4 text-2xl md:text-4xl text-[#6b4c3a]">
                 <div class="flex flex-col"><span id="days" class="font-bold">00</span><span class="text-xs uppercase tracking-widest mt-1 text-gray-500">Days</span></div><span class="font-bold">:</span>
