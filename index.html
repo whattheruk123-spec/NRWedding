@@ -1,122 +1,271 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nonlapan & Rukkij Wedding Invitation</title>
+    <title>Nonlapan & Rukkij Wedding</title>
+    
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <style>
+        /* Custom Styles & Typography */
         body {
-            background-color: #fdfcfb;
-            font-family: 'Playfair Display', serif;
+            font-family: 'Inter', sans-serif;
+            background-color: #faf9f6; /* Soft off-white floral-friendly background */
             color: #4a4a4a;
         }
         .font-script {
             font-family: 'Great Vibes', cursive;
         }
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 1s ease-out, transform 1s ease-out;
+        .font-serif {
+            font-family: 'Playfair Display', serif;
         }
-        .fade-in.visible {
+        
+        /* Scroll Animations */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-up.visible {
             opacity: 1;
             transform: translateY(0);
         }
-        .theme-dot {
-            height: 24px;
-            width: 24px;
-            border-radius: 50%;
-            display: inline-block;
-            margin: 0 4px;
-            border: 1px solid #e2e8f0;
+
+        /* Nav links hover effect */
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -2px;
+            left: 0;
+            background-color: #5b6f53;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
         }
     </style>
 </head>
-<body class="antialiased overflow-x-hidden">
+<body class="antialiased flex flex-col min-h-screen">
 
-    <!-- Hero / Cover Section -->
-    <section class="min-h-screen flex flex-col items-center justify-center p-4 text-center">
-        <p class="uppercase tracking-widest text-sm mb-6 fade-in text-gray-500">You are invited to the wedding</p>
-        
-        <!-- COVER IMAGE HERE -->
-        <div class="w-full max-w-lg mb-8 fade-in">
-            <img src="f495d0d4-724c-43ae-a29d-4bae273bfc39.jpeg" alt="Nonlapan and Rukkij Cover Illustration" class="w-full h-auto rounded-lg shadow-sm border border-gray-100">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-[#faf9f6]/90 backdrop-blur-sm z-50 py-4 shadow-sm">
+        <div class="container mx-auto px-6 flex justify-center space-x-6 md:space-x-12 text-sm tracking-widest uppercase text-[#5b6f53]">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#cards" class="nav-link">Invitation</a>
+            <a href="#details" class="nav-link">Details</a>
         </div>
+    </nav>
 
-        <h1 class="font-script text-6xl md:text-7xl text-[#6b4c3a] mb-4 fade-in">Nonlapan & Rukkij</h1>
-        <p class="text-xl tracking-widest text-[#6b4c3a] font-semibold fade-in">08.11.2026</p>
-        
-        <!-- Animated Scroll Indicator -->
-        <div class="mt-16 animate-bounce text-gray-400 fade-in">
-            <svg class="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-            </svg>
-        </div>
-    </section>
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center pt-20 px-4 relative overflow-hidden">
+        <!-- Decorative subtle background elements -->
+        <div class="absolute top-0 left-0 w-64 h-64 bg-[#bacbba] rounded-full mix-blend-multiply filter blur-3xl opacity-20 -translate-x-1/2 -translate-y-1/2"></div>
+        <div class="absolute bottom-0 right-0 w-80 h-80 bg-[#f4d6d6] rounded-full mix-blend-multiply filter blur-3xl opacity-20 translate-x-1/3 translate-y-1/3"></div>
 
-    <!-- Details Section -->
-    <section class="py-20 px-4 bg-white flex flex-col items-center text-center border-t border-gray-100">
-        <h2 class="text-3xl mb-10 fade-in text-[#6b4c3a]">Wedding Details</h2>
-        
-        <!-- DETAIL IMAGE HERE -->
-        <div class="w-full max-w-2xl mb-12 fade-in">
-            <img src="08b6a5aa-e56b-43e7-8167-5ac0c48d2feb.jpeg" alt="Wedding Details Card" class="w-full h-auto rounded-lg shadow-md border border-gray-100">
-        </div>
-
-        <!-- Interactive Countdown -->
-        <div class="w-full max-w-lg bg-gray-50 p-8 rounded-xl shadow-sm border border-gray-100 fade-in mt-8">
-            <h3 class="text-xl mb-6 text-[#6b4c3a] italic">Counting down to our big day</h3>
-            <div id="countdown" class="flex justify-center gap-4 text-2xl md:text-4xl text-[#6b4c3a]">
-                <div class="flex flex-col"><span id="days" class="font-bold">00</span><span class="text-xs uppercase tracking-widest mt-1 text-gray-500">Days</span></div><span class="font-bold">:</span>
-                <div class="flex flex-col"><span id="hours" class="font-bold">00</span><span class="text-xs uppercase tracking-widest mt-1 text-gray-500">Hours</span></div><span class="font-bold">:</span>
-                <div class="flex flex-col"><span id="minutes" class="font-bold">00</span><span class="text-xs uppercase tracking-widest mt-1 text-gray-500">Mins</span></div><span class="font-bold">:</span>
-                <div class="flex flex-col"><span id="seconds" class="font-bold">00</span><span class="text-xs uppercase tracking-widest mt-1 text-gray-500">Secs</span></div>
+        <div class="text-center z-10 fade-up max-w-3xl mx-auto">
+            <p class="uppercase tracking-[0.2em] text-sm md:text-base text-gray-500 mb-6 font-medium">You are invited to the wedding</p>
+            <h1 class="font-script text-6xl md:text-8xl text-[#5a4c41] mb-6">Nonlapan <span class="text-4xl md:text-6xl mx-2 text-[#879b80]">&</span> Rukkij</h1>
+            <p class="font-serif text-2xl md:text-3xl text-gray-700 mb-12">08 . 11 . 2026</p>
+            
+            <!-- Countdown Timer -->
+            <div class="flex justify-center space-x-4 md:space-x-8 mt-8">
+                <div class="flex flex-col items-center">
+                    <div id="days" class="font-serif text-3xl md:text-5xl text-[#3a4e3b]">00</div>
+                    <div class="text-xs uppercase tracking-widest text-gray-500 mt-2">Days</div>
+                </div>
+                <div class="font-serif text-3xl md:text-5xl text-gray-300">:</div>
+                <div class="flex flex-col items-center">
+                    <div id="hours" class="font-serif text-3xl md:text-5xl text-[#3a4e3b]">00</div>
+                    <div class="text-xs uppercase tracking-widest text-gray-500 mt-2">Hours</div>
+                </div>
+                <div class="font-serif text-3xl md:text-5xl text-gray-300">:</div>
+                <div class="flex flex-col items-center">
+                    <div id="minutes" class="font-serif text-3xl md:text-5xl text-[#3a4e3b]">00</div>
+                    <div class="text-xs uppercase tracking-widest text-gray-500 mt-2">Mins</div>
+                </div>
+                <div class="font-serif text-3xl md:text-5xl text-gray-300 hidden md:block">:</div>
+                <div class="flex flex-col items-center hidden md:flex">
+                    <div id="seconds" class="font-serif text-3xl md:text-5xl text-[#3a4e3b]">00</div>
+                    <div class="text-xs uppercase tracking-widest text-gray-500 mt-2">Secs</div>
+                </div>
             </div>
         </div>
     </section>
 
-    <footer class="py-8 text-center text-sm text-gray-400 bg-white">
-        <p>#NRWEDDING</p>
-        <p class="mt-2 text-xs italic">Sincerest apologies if the invitation was not personally delivered.</p>
+    <!-- Invitation Cards Section -->
+    <section id="cards" class="py-24 bg-white px-4">
+        <div class="container mx-auto max-w-5xl">
+            <div class="text-center mb-16 fade-up">
+                <h2 class="font-serif text-4xl text-[#3a4e3b] mb-4">The Invitation</h2>
+                <div class="w-16 h-[1px] bg-[#879b80] mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Front Cover -->
+                <div class="fade-up shadow-2xl rounded-lg overflow-hidden transform hover:-translate-y-2 transition duration-500 bg-white">
+                    <img src="f495d0d4-724c-43ae-a29d-4bae273bfc39.jpeg" alt="Front Cover" class="w-full h-auto object-contain" onerror="this.src='https://placehold.co/600x800/f8f9fa/5a4c41?text=Cover+Image+Not+Found'">
+                </div>
+                <!-- Back Cover / Details -->
+                <div class="fade-up shadow-2xl rounded-lg overflow-hidden transform hover:-translate-y-2 transition duration-500 delay-100 bg-white">
+                    <img src="08b6a5aa-e56b-43e7-8167-5ac0c48d2feb.jpeg" alt="Invitation Details" class="w-full h-auto object-contain" onerror="this.src='https://placehold.co/600x800/f8f9fa/5a4c41?text=Details+Image+Not+Found'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Details Section -->
+    <section id="details" class="py-24 px-4 bg-[#faf9f6]">
+        <div class="container mx-auto max-w-4xl text-center fade-up">
+            <h2 class="font-serif text-4xl text-[#3a4e3b] mb-12">Event Details</h2>
+            
+            <!-- Parents -->
+            <div class="grid md:grid-cols-2 gap-8 mb-16 font-serif text-lg md:text-xl text-[#5a4c41]">
+                <div>
+                    <p class="mb-2">Tanachai Kaivalkul</p>
+                    <p>Supatcharin Kaivalkul</p>
+                </div>
+                <div class="hidden md:flex items-center justify-center absolute left-1/2 -ml-[14px]">
+                    <span class="text-sm font-script text-3xl text-[#879b80]">and</span>
+                </div>
+                <div>
+                    <p class="mb-2">Somgiat Wanloptaree</p>
+                    <p>Tipsuda Wanloptaree</p>
+                </div>
+            </div>
+            
+            <p class="font-serif italic text-gray-500 mb-12">Request the honor of your presence at their marriage of</p>
+            
+            <h3 class="font-script text-5xl md:text-6xl text-[#5a4c41] mb-2">Nonlapan Kaivalkul <span class="text-3xl font-serif text-gray-400">(Numfah)</span></h3>
+            <div class="flex justify-center items-center my-4">
+                <div class="w-12 h-[1px] bg-[#879b80]"></div>
+                <i class="fa-solid fa-infinity text-[#879b80] mx-4 text-sm"></i>
+                <div class="w-12 h-[1px] bg-[#879b80]"></div>
+            </div>
+            <h3 class="font-script text-5xl md:text-6xl text-[#5a4c41] mb-16">Rukkij Wanloptaree <span class="text-3xl font-serif text-gray-400">(Ruk)</span></h3>
+
+            <!-- Date & Venue -->
+            <div class="mb-16">
+                <p class="font-serif text-2xl mb-4 text-[#3a4e3b]">on Sunday 8<sup>th</sup> November 2026</p>
+                <p class="font-serif text-xl text-gray-600">at Mellow Garden Restaurant & Bakery</p>
+            </div>
+
+            <!-- Schedule -->
+            <div class="grid grid-cols-2 gap-4 max-w-lg mx-auto mb-16 border-t border-b border-gray-200 py-8">
+                <div class="flex flex-col items-center">
+                    <i class="fa-solid fa-ring text-3xl text-[#879b80] mb-4"></i>
+                    <p class="font-serif text-xl text-[#3a4e3b] mb-1">15.09</p>
+                    <p class="text-sm tracking-widest uppercase text-gray-500">Engagement</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <i class="fa-solid fa-champagne-glasses text-3xl text-[#879b80] mb-4"></i>
+                    <p class="font-serif text-xl text-[#3a4e3b] mb-1">18.00</p>
+                    <p class="text-sm tracking-widest uppercase text-gray-500">Wedding Reception</p>
+                </div>
+            </div>
+
+            <!-- Theme & Hashtag -->
+            <div class="flex flex-col items-center space-y-6 mb-12">
+                <div class="flex items-center space-x-4">
+                    <span class="font-serif text-lg text-gray-600">Theme:</span>
+                    <div class="flex space-x-3">
+                        <div class="w-6 h-6 rounded-full bg-[#d9dbd8] shadow-sm border border-gray-200" title="Light Gray"></div>
+                        <div class="w-6 h-6 rounded-full bg-[#bacbba] shadow-sm border border-gray-200" title="Light Green"></div>
+                        <div class="w-6 h-6 rounded-full bg-[#879b80] shadow-sm border border-gray-200" title="Olive Green"></div>
+                        <div class="w-6 h-6 rounded-full bg-[#3a4e3b] shadow-sm border border-gray-200" title="Dark Green"></div>
+                    </div>
+                </div>
+                
+                <div class="text-2xl font-serif text-[#5a4c41] tracking-wide">
+                    #NRWEDDING
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white py-12 text-center border-t border-gray-100">
+        <div class="container mx-auto px-4 fade-up">
+            <p class="text-gray-500 text-sm italic font-serif">Sincerest apologies if the invitation was not personally delivered.</p>
+            <div class="mt-8">
+                <i class="fa-solid fa-seedling text-[#879b80]"></i>
+            </div>
+        </div>
     </footer>
 
-    <!-- Interactive Scripts -->
+    <!-- Scripts -->
     <script>
-        // Scroll Fade-in Animation
-        const observer = new IntersectionObserver((entries) => {
+        // 1. Intersection Observer for fade-in animations on scroll
+        const fadeElements = document.querySelectorAll('.fade-up');
+        
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.15
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
+                    // Optional: stop observing once faded in
+                    // observer.unobserve(entry.target);
                 }
             });
-        }, { threshold: 0.1 });
+        }, observerOptions);
 
-        document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
+        fadeElements.forEach(el => observer.observe(el));
 
-        // Countdown Timer to November 8, 2026 at 15:09
-        const weddingDate = new Date("Nov 8, 2026 15:09:00").getTime();
+        // 2. Countdown Timer Logic
+        // Target Date: Nov 8, 2026, 15:09:00
+        const countDownDate = new Date("Nov 8, 2026 15:09:00").getTime();
 
-        const x = setInterval(function() {
+        const updateCountdown = () => {
             const now = new Date().getTime();
-            const distance = weddingDate - now;
+            const distance = countDownDate - now;
 
+            if (distance < 0) {
+                document.getElementById("days").innerHTML = "00";
+                document.getElementById("hours").innerHTML = "00";
+                document.getElementById("minutes").innerHTML = "00";
+                document.getElementById("seconds").innerHTML = "00";
+                return;
+            }
+
+            // Time calculations for days, hours, minutes and seconds
             const days = Math.floor(distance / (1000 * 60 * 60 * 24));
             const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            document.getElementById("days").innerText = days.toString().padStart(2, '0');
-            document.getElementById("hours").innerText = hours.toString().padStart(2, '0');
-            document.getElementById("minutes").innerText = minutes.toString().padStart(2, '0');
-            document.getElementById("seconds").innerText = seconds.toString().padStart(2, '0');
-
-            if (distance < 0) {
-                clearInterval(x);
-                document.getElementById("countdown").innerHTML = "<div class='text-xl italic'>Today is the day!</div>";
+            // Output the result with zero padding
+            document.getElementById("days").innerHTML = days < 10 ? '0' + days : days;
+            document.getElementById("hours").innerHTML = hours < 10 ? '0' + hours : hours;
+            document.getElementById("minutes").innerHTML = minutes < 10 ? '0' + minutes : minutes;
+            if(document.getElementById("seconds")) {
+                document.getElementById("seconds").innerHTML = seconds < 10 ? '0' + seconds : seconds;
             }
-        }, 1000);
+        };
+
+        // Update the count down every 1 second
+        setInterval(updateCountdown, 1000);
+        updateCountdown(); // Call immediately to avoid 1-second delay flash
+
     </script>
 </body>
 </html>
